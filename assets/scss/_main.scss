@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  font-size: 14px;
+  line-height: 1.5;
+  font-family: $font-poppins;
+  background-color: $black;
+  padding: 50px 0 100px;
+}
+
+img,
+video {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+.heading-block {
+  .title {
+    font-family: $font-feogra;
+    color: $white;
+    margin-bottom: 20px;
+  }
+  .desc {
+    color: $white;
+    font-weight: 200;
+    letter-spacing: 0.015em;
+    line-height: 25px;
+  }
+}
+
+#banner {
+  .heading-block {
+    position: relative;
+    .title {
+      font-size: 250px;
+      line-height: 1;
+      @include large-desktop {
+        font-size: 150px;
+        text-align: center;
+      }
+      @include tablet {
+        font-size: 120px;
+      }
+      @include landscape-phone {
+        font-size: 100px;
+      }
+      @include mobile {
+        font-size: 50px;
+      }
+      span {
+        color: $pri;
+        font-size: 320px;
+        @include large-desktop {
+          font-size: 200px;
+        }
+        @include tablet {
+          font-size: 172px;
+        }
+        @include landscape-phone {
+          font-size: 130px;
+        }
+        @include mobile {
+          font-size: 90px;
+        }
+      }
+    }
+    .desc {
+      position: absolute;
+      right: 0;
+      bottom: 345px;
+      max-width: 400px;
+      @include large-desktop {
+        position: unset;
+        text-align: center;
+        margin: 0 auto;
+      }
+    }
+  }
+  .image {
+    margin-top: 50px;
+    overflow: hidden;
+    border-radius: 30px;
+  }
+}
+
+#about {
+  margin-top: 200px;
+  @include landscape-phone {
+    margin-top: 100px;
+  }
+  .about-wrapper {
+    @include flex(space-between, start, 35px);
+    @include tablet {
+      flex-direction: column-reverse;
+    }
+  }
+  .image {
+    width: 60%;
+    overflow: hidden;
+    border-radius: 30px;
+    @include tablet {
+      width: 100%;
+    }
+  }
+  .content {
+    width: 40%;
+    @include tablet {
+      width: 100%;
+    }
+    .heading-block {
+      .title {
+        font-size: 80px;
+        line-height: 1;
+        @include large-desktop {
+          font-size: 60px;
+        }
+        @include desktop {
+          font-size: 40px;
+        }
+        @include tablet {
+          br {
+            display: none;
+          }
+        }
+      }
+      .desc {
+        max-width: 80%;
+        margin-bottom: 20px;
+        @include desktop {
+          max-width: 100%;
+        }
+        @include tablet {
+          max-width: 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+#social {
+  margin-top: 200px;
+  @include landscape-phone {
+    margin-top: 100px;
+  }
+  .heading-block {
+    .title {
+      text-align: center;
+      font-size: 100px;
+      @include landscape-phone {
+        font-size: 60px;
+      }
+      span {
+        color: $pri;
+      }
+    }
+    .desc {
+      text-align: center;
+      font-size: 18px;
+    }
+  }
+  .button-wrapper {
+    @include flex(center, center, 20px);
+    margin-top: 50px;
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+  .button {
+    border-radius: 500px;
+    border: 2px solid $white;
+    min-width: 200px;
+    padding: 15px 40px;
+    font-size: 16px;
+    font-family: $font-feogra;
+    text-align: center;
+    color: $white;
+    transition: all ease 0.5s;
+    &:hover {
+      border-color: $pri;
+      background-color: $pri;
+      color: $black;
+    }
+  }
+}
